@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DIGITAL DYNAMIC VISUAL ACUITY DEVICE</title>
+  <style>
+    body {
+      text-align: left;
+      padding: 0;
+      color: #fff;
+      background: #1d1f20;
+    }
+    .image {
+      position: absolute;
+      top: 7%;
+      left: 25%;
+      margin: 0 -60px -60px 0;
+      -webkit-animation: spin 1.33s linear infinite;
+    }
+    @-webkit-keyframes spin {
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <p><strong>DIGITAL DYNAMIC VISUAL ACUITY DEVICE</strong></p>
+  <p><strong>SANKARA COLLEGE OF OPTOMETRY</strong></p>
+  <img id="theImage" class="image" src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbzFHlV4Axh6Bxm46js0HLaMkZW2BvnrdKynVtEIbR2Ha54Wtro7_VHJqzhntr0QvsEaGFzjGAAFL8pwIcoUaDgWbMqxw=s2560" alt="">
+  <img id="image" class="image" src="C:\Users\Public\round.png" alt="">
+  <button onclick="Rotate.start()">Start</button>
+  <button onclick="Rotate.stop()">Stop</button>
+  <button onclick="Rotate.setSpeed('1.33s')">45</button>
+  <button onclick="Rotate.setEasing('1.5s')">40</button>
+  <button onclick="Rotate.setEarsing('2s')">30</button>
+  <button onclick="Rotate.setEaing('3s')">20</button>
+  <button onclick="Rotate.setErsing('6s')">10</button>
+  <button onclick="Rotate.pause()">Pause</button>
+  <script>
+    Rotate = {
+      speed: 1.33,
+      start: function() {
+        var elem = document.getElementById('theImage');
+        elem.style.animationPlayState = 'running';
+      },
+      stop: function() {
+        var elem = document.getElementById('theImage');
+        elem.style.animationPlayState = 'paused';
+      },
+      setSpeed: function(newSpeed) {
+        var elem = document.getElementById('theImage');
+        elem.style.animationDuration = newSpeed;
+      },
+      setEasing: function(newEasing) {
+        var elem = document.getElementById('theImage');
+        elem.style.animationDuration = newEasing;
+      },
+      setEarsing: function(newEarsing) {
+        var elem = document.getElementById('theImage');
+        elem.style.animationDuration = newEarsing;
+      },
+      setEaing: function(newEaing) {
+        var elem = document.getElementById('theImage');
+        elem.style.animationDuration = newEaing;
+      },
+      setErsing: function(newErsing) {
+        var elem = document.getElementById('theImage');
+        elem.style.animationDuration = newErsing;
+      },
+      pause: function() {
+        var elem = document.getElementById('theImage');
+        elem.style.animationPlayState = 'paused';
+      },
+    };
+  </script>
+</body>
+</html>
